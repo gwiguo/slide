@@ -123,7 +123,7 @@ $(function () {
                 effect: "slide",
                 autoPlay: false,
                 stay: 3000,
-                width: $("#part4 .slide-div-item").width()+1,
+                width: $("#part4 .slide-div-item").width(),
                 playTo: 0,
                 link: true
             });
