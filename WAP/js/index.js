@@ -8,14 +8,14 @@ $(function () {
         handleRowNav() {
             // 遍历每个横导航的item，注册点击事件跳转到对应模块
             $(".nav-list .nav-item").each(function (index) {
-                $(this).click(function () {
+                this.ontouchstart = function () {
                     // 先移除所有item的选中态
                     $(".nav-list .nav-item").removeClass("nav-active");
                     // 设置当前点击item的选中态
                     $(this).addClass("nav-active");
                     // 跳转到对应模块
                     $(`#part${index + 1}`)[0].scrollIntoView(true)
-                })
+                }
             })
         },
     }
