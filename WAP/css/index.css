@@ -28,6 +28,9 @@
   font-weight: bolder;
   user-select: none;
 }
+.wap-container .nav-wrap .nav-list .nav-item a {
+  color: inherit;
+}
 .wap-container .nav-wrap .nav-list .nav-active {
   color: #d2a75a;
   background-color: #151515;
