@@ -27,28 +27,6 @@ $(function () {
             this.play()
         },
         slide() {
-            // new Slide({
-            //     target: $("#part1 li"),
-            //     prevBtn: $("#part1 .back"),
-            //     nextBtn: $("#part1 .next"),
-            //     effect: "slide",
-            //     autoPlay: false,
-            //     stay: 3000,
-            //     width: $("#part1 .content").width() + 1,
-            //     playTo: 0,
-            //     link: true,
-            //     onchange() {
-            //         // 切换轮播图的时候把上一个轮播图里的视频暂停
-            //         const prevPage = $(this)[0].prevPage
-            //         // 因为轮播图初始化的时候prevPage为undefined所以要先判断
-            //         if (prevPage !== undefined) {
-            //             $(this)[0].target[prevPage].querySelector("video").pause()
-            //             // 隐藏上一个视频的控件
-            //             $(this)[0].target[prevPage].querySelector("video").removeAttribute("controls")
-            //             $($(this)[0].target[prevPage]).find(".video-logo").css("display", "block")
-            //         }
-            //     }
-            // })
             new Swiper ('#part1 .slide-box', {
                 loop: true,     
                 navigation: {
@@ -80,18 +58,6 @@ $(function () {
             this.slide()
         },
         slide() {
-            // new Slide({
-            //     target: $("#part2 li"),
-            //     control: $("#part2 .wap-slide-ctr i"),
-            //     prevBtn: $("#part2 .back"),
-            //     nextBtn: $("#part2 .next"),
-            //     effect: "slide",
-            //     autoPlay: false,
-            //     stay: 3000,
-            //     width: $("#part2 .content").width() + 1,
-            //     playTo: 0,
-            //     link: true
-            // });
             new Swiper ('#part2 .slide-box', {
                 loop: true,     
                 navigation: {
@@ -210,34 +176,6 @@ $(function () {
                     $(this).addClass("current")
                 }
             })
-            // $("#part3 .slide-container").each(function () {
-            //     new Slide({
-            //         target: $(this).find(".slide-div"),
-            //         control: $(this).find(".slide-ctr i"),
-            //         prevBtn: $(this).find(".back"),
-            //         nextBtn: $(this).find(".next"),
-            //         effect: "fade",
-            //         autoPlay: true,
-            //         stay: 3000,
-            //         width: $("#part3 .content .slide-div").width() + 1,
-            //         playTo: 0,
-            //         link: true
-            //     });
-            //     $("#part3 .item").each(function () {
-            //         this.ontouchstart = function () {
-            //             // 先隐藏所有轮播图
-            //             $("#part3 .slide-container").css("display", "none");
-            //             // 只显示品牌对应的轮播图
-            //             const index = $(this).index();
-            //             $("#part3 .slide-container").eq(index).css("display", "block")
-            //             // 移除所有品牌的选中态
-            //             $("#part3 .item").removeClass("current")
-            //             // 只设置当前品牌的选中态
-            //             $(this).addClass("current")
-            //         }
-
-            //     })
-            // });
         }
     }
     // 嘉宾助阵
@@ -267,17 +205,6 @@ $(function () {
                     prevEl: $("#part4 .back"),
                 }
             }) 
-            // new Slide({
-            //     target: $("#part4 .slide-div-item"),
-            //     prevBtn: $("#part4 .back"),
-            //     nextBtn: $("#part4 .next"),
-            //     effect: "slide",
-            //     autoPlay: false,
-            //     stay: 3000,
-            //     width: $("#part4 .slide-div-item").width()+1,
-            //     playTo: 0,
-            //     link: true
-            // });
         }
     }
     // 十佳设计师
@@ -314,18 +241,6 @@ $(function () {
                     }
                 }
             }) 
-            // new Slide({
-            //     target: $("#part5 .slide-div-item"),
-            //     control: $("#part5 .wap-slide-ctr i"),
-            //     prevBtn: $("#part5 .back"),
-            //     nextBtn: $("#part5 .next"),
-            //     effect: "fade",
-            //     autoPlay: false,
-            //     stay: 3000,
-            //     width: $("#part5 .slide-box").width(),
-            //     playTo: 0,
-            //     link: true
-            // });
         }
     }
     nav.init();
