@@ -14,18 +14,19 @@ body {
   overflow-x: auto;
 }
 .wap-container .nav-wrap .nav-list {
+  display: flex;
   position: relative;
-  width: 115vw;
   height: 8.2667vw;
   background: url(../img/nav_bg.png) repeat;
   overflow-x: auto;
 }
-.wap-container .nav-wrap .nav-list li {
+.wap-container .nav-wrap .nav-list .nav-item {
   flex: 0 0 auto;
   float: left;
   padding: 0 3.3333vw;
   height: 100%;
   line-height: 8.2667vw;
+  background-size: contain;
   font-size: 3.7333vw;
   color: #000;
   font-weight: bolder;
@@ -186,20 +187,20 @@ body {
   background: url(../img/next.png) no-repeat;
   background-size: 100%;
 }
-.wap-container #part2 .content .pc-slide-ctr {
+.wap-container #part2 .content .wap-slide-ctr {
   width: 100%;
   text-align: center;
   padding-top: 4px;
   font-size: 14px;
 }
-.wap-container #part2 .content .pc-slide-ctr i {
+.wap-container #part2 .content .wap-slide-ctr i {
   display: inline-block;
   width: 2.1333vw;
   height: 2.1333vw;
   background: url(../img/part2_slide_default.png) center no-repeat;
   cursor: pointer;
 }
-.wap-container #part2 .content .pc-slide-ctr .current {
+.wap-container #part2 .content .wap-slide-ctr .current {
   background-image: url(../img/part2_slide_current.png);
 }
 .wap-container #part3 {
@@ -461,44 +462,122 @@ body {
   background: url(../img/part5_bg.png) center no-repeat;
   background-size: 100%;
 }
-.wap-container #part5 .big-pic {
+.wap-container #part5 .slide-box {
   position: absolute;
   top: 33.3333vw;
   left: 7.3333vw;
+  height: 84.6667vw;
+  width: 89.3333vw;
+}
+.wap-container #part5 .slide-box ul {
+  height: 84.6667vw;
+}
+.wap-container #part5 .slide-box ul li {
+  position: relative;
+  height: 84.6667vw;
+  width: 100%;
+}
+.wap-container #part5 .slide-box ul li .big-pic {
   width: 48.6667vw;
   height: 72.5333vw;
 }
-.wap-container #part5 .big-pic img {
+.wap-container #part5 .slide-box ul li .big-pic img {
   width: 48.6667vw;
   height: 72.5333vw;
+  object-fit: cover;
 }
-.wap-container #part5 .info {
+.wap-container #part5 .slide-box ul li .info {
   position: absolute;
-  top: 33.3333vw;
-  right: 3.6vw;
+  top: 0;
+  right: 0.6667vw;
   width: 39.0667vw;
   height: 84.6667vw;
 }
-.wap-container #part5 .info .small-pic {
-  width: 301px;
-  height: 302px;
-  border-width: 15px;
-  border-image-source: url(../img/part5_pic_right_bg.png);
-  border-image-width: 15px;
-  border-image-slice: 15;
-}
-.wap-container #part5 .info .small-pic img {
-  padding: 15px;
-  margin-top: -1px;
-  margin-left: -2px;
-  width: 275px;
-  height: 274px;
-}
-.wap-container #part5 .info img {
-  margin-left: 3.4667vw;
-  margin-top: 7.3333vw;
+.wap-container #part5 .slide-box ul li .info .small-pic {
+  position: relative;
+  margin-left: 3.8667vw;
+  margin-top: 6.6667vw;
   width: 29.0667vw;
   height: 29.2vw;
+}
+.wap-container #part5 .slide-box ul li .info .small-pic .pic-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 29.0667vw;
+  height: 29.2vw;
+  background-image: url(../img/part5_pic_right_bg.png);
+  background-size: 100%;
+}
+.wap-container #part5 .slide-box ul li .info .small-pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 1.7333vw;
+  margin-left: 1.6vw;
+  width: 25.7333vw;
+  height: 25.8667vw;
+  object-fit: cover;
+}
+.wap-container #part5 .slide-box ul li .info .name {
+  margin-top: 4.6667vw;
+  margin-left: 3.8667vw;
+  font-size: 3.2vw;
+  font-weight: bolder;
+}
+.wap-container #part5 .slide-box ul li .info .desc {
+  margin: 4.6667vw 3.8667vw;
+  font-size: 2.4vw;
+  line-height: 1.75;
+  font-weight: bolder;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.wap-container #part5 .slide-box .back,
+.wap-container #part5 .slide-box .next {
+  position: absolute;
+  top: 50%;
+  height: 5.7333vw;
+  width: 7.6vw;
+  margin-top: -2.8666vw;
+}
+.wap-container #part5 .slide-box .back {
+  left: 0;
+  background: url(../img/part5_back.png) no-repeat;
+  background-size: 100%;
+}
+.wap-container #part5 .slide-box .next {
+  right: 0;
+  background: url(../img/part5_next.png) no-repeat;
+  background-size: 100%;
+}
+.wap-container #part5 .wap-slide-ctr {
+  position: absolute;
+  bottom: 8vw;
+  width: 100%;
+  text-align: center;
+  padding-top: 4px;
+  font-size: 14px;
+}
+.wap-container #part5 .wap-slide-ctr i {
+  display: inline-block;
+  width: 2.1333vw;
+  height: 2.1333vw;
+  background: url(../img/part2_slide_default.png) center no-repeat;
+  cursor: pointer;
+}
+.wap-container #part5 .wap-slide-ctr .current {
+  background-image: url(../img/part2_slide_current.png);
+}
+.wap-container #team {
+  position: relative;
+  width: 100vw;
+  height: 19.7333vw;
+  background: url(../img/team_bg.png) center no-repeat;
+  background-size: 100%;
 }
 .wap-container #part1 .control,
 .wap-container #part4 .control {

@@ -46,7 +46,7 @@ $(function () {
         slide() {
             new Slide({
                 target: $("#part2 li"),
-                control: $("#part2 .pc-slide-ctr i"),
+                control: $("#part2 .wap-slide-ctr i"),
                 prevBtn: $("#part2 .back"),
                 nextBtn: $("#part2 .next"),
                 effect: "slide",
@@ -129,8 +129,30 @@ $(function () {
             });
         }
     }
+    // 十佳设计师
+    const part5 = {
+        init() {
+            // 轮播图
+            this.slide();
+        },
+        slide() {
+            new Slide({
+                target: $("#part5 .slide-div-item"),
+                control: $("#part5 .wap-slide-ctr i"),
+                prevBtn: $("#part5 .back"),
+                nextBtn: $("#part5 .next"),
+                effect: "fade",
+                autoPlay: false,
+                stay: 3000,
+                width: $("#part5 .slide-box").width(),
+                playTo: 0,
+                link: true
+            });
+        }
+    }
     part1.init();
     part2.init();
     part3.init();
     part4.init();
+    part5.init();
 })
