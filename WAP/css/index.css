@@ -20,6 +20,7 @@
   overflow-y: hidden;
 }
 .wap-container .nav-wrap .nav-list .nav-item {
+  overflow-y: hidden;
   flex: 0 0 auto;
   float: left;
   padding: 0 3.3333vw;
@@ -31,6 +32,7 @@
   user-select: none;
 }
 .wap-container .nav-wrap .nav-list .nav-item a {
+  overflow-y: hidden;
   display: flex;
   align-items: center;
   width: 100%;
