@@ -1,4 +1,24 @@
 $(function () {
+    // 横导航
+    const nav = {
+        init() {
+            // 点击横导航跳转到对应模块
+            this.handleRowNav();
+        },
+        handleRowNav() {
+            // 遍历每个横导航的item，注册点击事件跳转到对应模块
+            $(".nav-list .nav-item").each(function (index) {
+                $(this).click(function () {
+                    // 先移除所有item的选中态
+                    $(".nav-list .nav-item").removeClass("nav-active");
+                    // 设置当前点击item的选中态
+                    $(this).addClass("nav-active");
+                    // 跳转到对应模块
+                    $(`#part${index + 1}`)[0].scrollIntoView(true)
+                })
+            })
+        },
+    }
     const part1 = {
         init() {
             // 视频轮播
@@ -150,6 +170,7 @@ $(function () {
             });
         }
     }
+    nav.init();
     part1.init();
     part2.init();
     part3.init();
