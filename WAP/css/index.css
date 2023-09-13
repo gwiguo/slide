@@ -8,6 +8,7 @@
 }
 .wap-container .nav-wrap {
   overflow-x: auto;
+  overflow-y: hidden;
   background: url(../img/nav_bg.png) repeat;
   height: 8.2667vw;
 }
