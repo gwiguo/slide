@@ -17,6 +17,7 @@
   position: relative;
   height: 8.4vw;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .wap-container .nav-wrap .nav-list .nav-item {
   flex: 0 0 auto;
