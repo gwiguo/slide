@@ -14,7 +14,7 @@
 .wap-container .nav-wrap .nav-list {
   display: flex;
   position: relative;
-  height: 100%;
+  height: 8.4vw;
   overflow-x: auto;
 }
 .wap-container .nav-wrap .nav-list .nav-item {
